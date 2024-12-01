@@ -1,0 +1,13 @@
+/*
+*/
+
+
+@media (min-width: 1 && max-width: 2560px)
+
+body {
+    background-color: beige;
+}
+div.headline {
+    text-align: center;
+    color: red;
+}
