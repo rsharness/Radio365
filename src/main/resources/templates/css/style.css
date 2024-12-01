@@ -2,7 +2,7 @@
 */
 
 
-@media (min-width: 1 && max-width: 2560px)
+@media  only screen and (min-width: 1000px)
 
 body {
     background-color: beige;

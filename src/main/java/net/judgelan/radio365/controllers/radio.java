@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-//@RequestMapping
+@RequestMapping
 public class radio {
 
     public String myName = "myName";
@@ -21,10 +21,13 @@ public class radio {
     }
 
     @GetMapping("form")
-    @ResponseBody
+//    @ResponseBody
     public String hello(Model model){
-        model.addAttribute();
-        return "form";
+        model.addAttribute("firstName", myName);
+        model.addAttribute("lastName", yourName);
+
+//        return "Hello, " + myName + " & " + yourName;
+        return "html/form";
     }
 
 
