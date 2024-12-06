@@ -12,16 +12,19 @@
 <body>
 <header>
     <div class="headline">
-        <h1>    Welcome to WKRP in Cincinnati</h1>
+        <h2>    Welcome to WKRP in Cincinnati</h2>
     </div>
 
 </header>
 <main>
-    <div>
-        <form class="form form-group" method="GET" action="/form" >
-            <input class="form form-sm" type="text" name="firstName" size="25" />
-            <input class="form form-sm" type="text" name="lastName" size="30" />
-            <input class="btn btn-info btn-sm"   type="button" value="Submit" />
+    <div class="form">
+        <form class="form" method="GET" action="process" >
+            <label for="formFirstName">First Name:</label>
+            <input class="form form-sm" type="text" th:text="{formFirstName}" name="formFirstName" size="25" />
+            <label for="formLastName">Last Name:</label>
+            <input class="form form-sm" type="text" th:text = "formLastName" name="formLastName" size="30" />
+            <label for="clicky">Sumbit:</label>
+            <input class="btn btn-warning"   type="button" value="Submit" name="clicky" />
         </form>
     </div>
 </main>

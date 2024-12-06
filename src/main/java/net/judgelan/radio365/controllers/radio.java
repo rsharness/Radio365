@@ -2,34 +2,22 @@ package net.judgelan.radio365.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
+@RequestMapping("practice")
 public class radio {
 
     public String myName = "myName";
 
     public String yourName  = "yourName";
 
-
     @GetMapping("/")
     public String welcomeMessage(){
         return "Hello, Guy";
     }
 
-    @GetMapping("form")
-//    @ResponseBody
-    public String hello(Model model) {
-        model.addAttribute("firstName", myName);
-        model.addAttribute("lastName", yourName);
-
-//        return "Hello, " + myName + " & " + yourName;
-        return "html/form";
-    }
 //
     @GetMapping("hi")
     @ResponseBody
@@ -55,7 +43,31 @@ public class radio {
         return "latez, bruh " + name;
     }
 //
+    @GetMapping("hello/{path}")
+    @ResponseBody
+    public String pathName(@PathVariable String path){
+        return "you are at " + path;
+    }
 
+//
+    @GetMapping("form")
+    public String hello(Model model) {
+        model.addAttribute("firstName", formFirstName);
+        model.addAttribute("lastName", formLastName);
 
+//        return "Hello, " + myName + " & " + yourName;
+        return "html/form";
+    }
+    // Responds to get and post requests at /hello?coder=LaunchCoder
+    @RequestMapping(value = "hello", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public String hello(@RequestParam String coder) {
+        return "Hello, " + coder + "!";
+    }
 
+    @GetMapping("home")
+    public String helloPage() {
+        String result = "index" ;
+        return result;
+    }
 }

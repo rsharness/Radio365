@@ -1,6 +1,5 @@
 
-console.log("Console initiated")
-
+// DATE VARIABLES
 const date = new Date();
 
 const year = date.getFullYear();
@@ -12,4 +11,6 @@ const seconds = ("0" + date.getSeconds()).slice(-2);
 
 const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
+// OUTPUT
+console.log("Console initiated")
 console.log(formattedDate);

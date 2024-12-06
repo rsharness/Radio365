@@ -1,13 +1,35 @@
 /*
+  #
+    Primary Project CSS File to suppliment bootstrap
+  #
 */
 
 
-@media  only screen and (min-width: 1000px)
+/*
+    @media  only screen and (min-width: 1000px ){
+*/
 
-body {
-    background-color: beige;
-}
-div.headline {
-    text-align: center;
-    color: red;
-}
+
+    body {
+        background-color: beige;
+        margin: auto;
+        display: flex
+    }
+
+    div {
+        display: flex;
+    }
+
+    div.headline {
+        width: 50%;
+        margin: 50px;
+        padding: 20px;
+        text-align: center;
+        color: Blue;
+        background-color: teal;
+        z-index: 2;
+
+    }
+    div.form {
+        border-radius: 8;
+    }
