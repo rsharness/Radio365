@@ -6,68 +6,31 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@RequestMapping("practice")
 public class radio {
-
-    public String myName = "myName";
-
-    public String yourName  = "yourName";
-
+    // FRONTPAGE
     @GetMapping("/")
-    public String welcomeMessage(){
-        return "Hello, Guy";
+    public String homePage(){
+        String html = "index";
+        return html;
     }
 
-//
-    @GetMapping("hi")
-    @ResponseBody
-    public String hello(){
-        return "Hello " + yourName;
-    }
+    //  FORM
+    @RequestMapping(value = "form", method = {RequestMethod.GET, RequestMethod.POST})
+    public String hello(@RequestParam String formFirstName, @RequestParam String formLastName, Model model) {
+        String inputFormFirstname = "firstName";
+        String inputFormLastName = "lastName";
+        model.addAttribute("firstName", inputFormLastName);
+        model.addAttribute("lastName", inputFormLastName);
 
-    @GetMapping("hello")
-    @ResponseBody
-    public String helloThere(@RequestParam String name){
-        return "Hello " + name;
-    }
-//
-    @GetMapping("bye")
-    @ResponseBody
-    public String bye(){
-        return "aufwiedersehen " + yourName;
-    }
-
-    @GetMapping("goodbye")
-    @ResponseBody
-    public String latez(@RequestParam String name){
-        return "latez, bruh " + name;
-    }
-//
-    @GetMapping("hello/{path}")
-    @ResponseBody
-    public String pathName(@PathVariable String path){
-        return "you are at " + path;
-    }
-
-//
-    @GetMapping("form")
-    public String hello(Model model) {
-        model.addAttribute("firstName", formFirstName);
-        model.addAttribute("lastName", formLastName);
-
-//        return "Hello, " + myName + " & " + yourName;
         return "html/form";
     }
-    // Responds to get and post requests at /hello?coder=LaunchCoder
-    @RequestMapping(value = "hello", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
-    public String hello(@RequestParam String coder) {
-        return "Hello, " + coder + "!";
-    }
 
-    @GetMapping("home")
-    public String helloPage() {
-        String result = "index" ;
-        return result;
-    }
+        @GetMapping("form")
+        @ResponseBody
+            public String howdy(){
+                String hola = "dklfajslkdfjalksdjf";
+                return hola;
+        }
+
+
 }

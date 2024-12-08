@@ -1,19 +1,11 @@
-/*
-  #
-    Primary Project CSS File to suppliment bootstrap
-  #
-*/
-
-
-/*
-    @media  only screen and (min-width: 1000px ){
-*/
-
+    html {
+        margin-left: 200px;
+}
 
     body {
         background-color: beige;
-        margin: auto;
-        display: flex
+        margin-left: 50px;
+        display: flex;
     }
 
     div {
@@ -28,8 +20,10 @@
         color: Blue;
         background-color: teal;
         z-index: 2;
+        display: flex;
 
     }
     div.form {
         border-radius: 8;
+        display: flex;
     }

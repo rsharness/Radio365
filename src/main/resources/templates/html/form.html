@@ -22,8 +22,8 @@
             <label for="formFirstName">First Name:</label>
             <input class="form form-sm" type="text" th:text="{formFirstName}" name="formFirstName" size="25" />
             <label for="formLastName">Last Name:</label>
-            <input class="form form-sm" type="text" th:text = "formLastName" name="formLastName" size="30" />
-            <label for="clicky">Sumbit:</label>
+            <input class="form form-sm" type="text" th:text = "{formLastName}" name="formLastName" size="30" />
+            <label for="clicky">Submit:</label>
             <input class="btn btn-warning"   type="button" value="Submit" name="clicky" />
         </form>
     </div>
