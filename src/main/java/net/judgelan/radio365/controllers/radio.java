@@ -10,24 +10,26 @@ import java.util.List;
 
 @Controller
 public class radio {
-    // FRONTPAGE
+// #######################  FRONTPAGE   #######################
     @GetMapping("/")
     public String homePage(Model model){
-        model.addAttribute("headLine", "Test Title");
-        model.addAttribute("infoPane", "This Page is a test");
+        model.addAttribute("titulo", "Radio365");
+        model.addAttribute("headLine", "Radio365");
+        model.addAttribute("infoPane", "Your Radio Companion");
+        model.addAttribute("copyRight", "Code By C0dEX");
         String html = "index";
         return html;
     }
-
-        //  FORM
+//  #######################  Form   #######################
         @RequestMapping(value = "form", method = {RequestMethod.GET, RequestMethod.POST})
             public String hello(Model model) {
             return "html/form";
     }
 
 
-
+//  #######################   List in Body    #######################
         @GetMapping("list")
+
         public String namesList(Model model){
             List<String> listData = new ArrayList<>();
                 listData.add("Me");
@@ -40,7 +42,7 @@ public class radio {
 
                 model.addAttribute("names", listData );
 
-            return "html/listDataPage";
+            return "html/list";
 
         }
 
