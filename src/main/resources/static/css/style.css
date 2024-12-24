@@ -29,9 +29,15 @@
     }
 
     .headline {
-        color: ;
+        background-color: aqua;
+        color: antiquewhite ;
     }
 
     section {
         background-color: burlywood;
+    }
+
+    .lamigra {
+        border-color: black;
+        border: 1px 2px 1px 2px;
     }

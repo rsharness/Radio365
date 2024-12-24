@@ -1,5 +1,5 @@
 
-// DATE VARIABLES
+// DATE VARIABLES: Store info into callables
 const date = new Date();
 
 const year = date.getFullYear();
@@ -11,6 +11,6 @@ const seconds = ("0" + date.getSeconds()).slice(-2);
 
 const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
-// OUTPUT
-console.log("Console initiated")
+// OUTPUT: Message and Datestamp
+console.log("Console initiated");
 console.log(formattedDate);
