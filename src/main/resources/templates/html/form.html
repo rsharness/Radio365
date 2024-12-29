@@ -26,7 +26,7 @@
       <p>
         <div class="lamigra">
           <!--   Maybe more later?? we'll see   -->
-          <form class="form frm-" action="" method="post">
+          <form class="form form-control-md" action="controllers/homeController" method="POST">
             <label for="firstName">
               <input type="text" name="firstName" id="firstName" placeholder="First">
             </label>
@@ -38,7 +38,7 @@
               <input type="text" name="callSign"  id="callSign" placeholder="call/handle">
             </label>
             <label for="eMail">
-              <input type="text" name="eMail"  id="eMail" placeholder="E-Mail (Optional)">
+              <input type="email" name="eMail"  id="eMail" placeholder="E-Mail (Optional)">
             </label>
             <br />
             <label for="country">
@@ -60,7 +60,7 @@
               <input type="text" name="notes" id="notes" placeholder="notes..." size="46" height=10>
             </label>
             <br />
-            <input type="button" value="Submit to me" name="submit" class="btn btn-primary">
+            <input type="button" value="Submit to me" name="submit" class="btn btn-primary" onsubmit="contactController">
 
 
         </form>
