@@ -16,7 +16,7 @@ public class antennasController {
 
     public String dipoleCalc(int frequency, int speed,  int velocityFactor, Model model) {
         int calcAResult = (frequency * speed)*velocityFactor;
-        
+
         model.addAttribute("result", calcAResult);
         return "html/antenna";
      }

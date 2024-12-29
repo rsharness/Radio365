@@ -33,7 +33,7 @@ public class homeController {
                 String name = "testing";
                 model.addAttribute("test", name);
                 model.addAttribute("mainPageTitle", "Radidio365");
-            return "html/list";
+            return "html/form";
     }
 
 
