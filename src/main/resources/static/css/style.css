@@ -5,11 +5,12 @@
     body {
         background-color: beige;
         margin-left: 50px;
+        padding-left: 50px;
         display: flex;
     }
 
     div {
-        display: flex;
+        display: flex-row;
     }
 
     div.headline {

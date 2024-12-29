@@ -43,7 +43,7 @@ public class homeController {
      * @return results list**/
         @RequestMapping( value = "list", method = {RequestMethod.GET, RequestMethod.POST})
         public String namesList(Model model){
-            String wordle = "What it be like home team champs dude";
+            String wordle = "What it be like home slice team champs dude";
             List<String> listData = new ArrayList<>();
                 listData.add("option0");
                 listData.add("option1");
