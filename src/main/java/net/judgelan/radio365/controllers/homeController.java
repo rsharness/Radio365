@@ -14,19 +14,24 @@ import java.util.List;
 
 @Controller
 public class homeController {
-// #######################    FRONTPAGE     #######################
-    @GetMapping("/")
+
+    // Globals
+    private List<String> abcdE = new ArrayList<>();
+
+
+    // #######################    FRONTPAGE     #######################
+    @GetMapping
     public String homePage(Model model){
         model.addAttribute("titulo", "Radio365");
         model.addAttribute("headLine", "Radio365");
         model.addAttribute("infoPane", "Your Radio Companion");
         model.addAttribute("copyRight", "Code By X0dEX");
-        String html = "index";
-        return html;
+
+        return "index";
     }
 
 
-    @GetMapping
+    @GetMapping("/nav")
       public String navList(Model model){
         String homepage = "Home";
         String antenna = "Antenna Info";
@@ -36,9 +41,15 @@ public class homeController {
         model.addAttribute("satellite", antenna);
         model.addAttribute("qso", contacts);
 
-        return "fragments/header";
+        return "/fragments/header";
     }
 
 
+    public List<String> getAbcdE() {
+        return abcdE;
+    }
 
+    public void setAbcdE(List<String> abcdE) {
+        this.abcdE = abcdE;
+    }
 }

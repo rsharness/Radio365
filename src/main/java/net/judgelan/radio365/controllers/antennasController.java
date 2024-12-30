@@ -1,11 +1,13 @@
 package net.judgelan.radio365.controllers;
 
+
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class antennasController {
+public class antennasController extends homeController {
 
     /**@return "Element Length";
      * @param frequency;
@@ -24,8 +26,11 @@ public class antennasController {
     @GetMapping("antennas")
     @ResponseBody
     public String antennaPage(Model model){
+        String vulgar = "testies123";
+        model.addAttribute("test", vulgar);
 
-        return "elementResult";
+
+        return "html/list";
 
     }
 
