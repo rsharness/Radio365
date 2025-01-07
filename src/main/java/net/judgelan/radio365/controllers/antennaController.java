@@ -7,7 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class antennasController extends homeController {
+@RequestMapping(value = "antennas")
+public class antennaController  {
 
     /**@return "Element Length";
      * @param frequency;
@@ -23,15 +24,13 @@ public class antennasController extends homeController {
         return "html/antenna";
      }
 
-    @GetMapping("antennas")
+    @GetMapping
     @ResponseBody
     public String antennaPage(Model model){
         String vulgar = "testies123";
         model.addAttribute("test", vulgar);
-
-
-        return "html/list";
-
+        return "html/antenna/index";
     }
+
 
 }

@@ -6,19 +6,22 @@
 <!-- Start of Displayed Content -->
 <body>
 <header>
-  <h1 th:text="${headline}">This is a headline</h1>
+  <h1 th:text="Events">This is a headline</h1>
 </header>
 <main>
-  <section><p th:text="${greeting}">Generic Landing Page</p></section>
-  <div th:block>
-    <ul th:each = "name : ${names}">
-      <li th:text = "${name}"></li>
-    </ul>
-  </div>
+  <section>
+    <p>
+      <img th:href="${passingTime}" />
+        Generic Landing Page
+      </p>
+  </section>
+  <section>
+    <p th:replace="~{fragments/header::EventList}">
+  </section>
 
 </main>
 <footer>
-  <sub th:text = "${copyright}">Code By C0dEX</sub>
+  <sub th:text="JudgeLAN2024"></sub>
 </footer>
 </body>
 </html>

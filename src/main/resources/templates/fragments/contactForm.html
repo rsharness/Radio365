@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title></title>
+</head>
+<body>
+
+<h1 th:text="${headLine}">This is a headline</h1>
+
+
+<section>
+  <article>
+    <p th:text="${article1}">
+      ...Information for form here...
+    </p>
+    <p>
+    <div class="lamigra">
+      <!--   Maybe more later?? we'll see   -->
+      <form class="form form-control-md" action="controllers/homeController" method="POST">
+        <label for="firstName">
+          <input type="text" name="firstName" id="firstName" placeholder="First">
+        </label>
+        <label for="lastName">
+          <input type="text" name="lastName" id="lastName" placeholder="Last">
+        </label>
+        <br/>
+        <label for="callSign">
+          <input type="text" name="callSign" id="callSign" placeholder="call/handle">
+        </label>
+        <label for="eMail">
+          <input type="email" name="eMail" id="eMail" placeholder="E-Mail (Optional)">
+        </label>
+        <br/>
+        <label for="country">
+          <input type="text" name="country" id="country" placeholder="Country">
+        </label>
+        <label for="region">
+          <input type="text" name="region" id="region" placeholder="Region">
+        </label>
+        <br/>
+        <label for="state">
+          <input type="text" name="state" id="state" placeholder="State/Province">
+        </label>
+        <label for="city">
+          <input type="text" name="city" id="city" placeholder="City">
+        </label>
+        <br/>
+        <br/>
+        <label for="notes">
+          <input type="text" name="notes" id="notes" placeholder="notes..." size="46" height=10>
+        </label>
+        <br/>
+        <input type="button" value="Submit to me" name="submit" class="btn btn-primary" onsubmit="contactController">
+
+
+      </form>
+    </div>
+  </article>
+</section>
+<!---->
+<section>
+  <div>
+    <p th:text="${test}">..*..</p>
+  </div>
+</section>
+<sub th:text="${copyRight}"></sub>
+
+</body>
+</html>

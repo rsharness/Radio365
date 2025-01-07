@@ -5,6 +5,12 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1733016707914_3" label="hamClub" name="hamClub">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/.gradle" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1736158830980_4" label="gradle-groovy" name="gradle-groovy">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/.gradle" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hello-htmx" type="4"/>
+<item elementID="=Java_Practice" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1733015252841_2" label="Window Working Set" name="Aggregate for window 1733015252841"/>
+<mruList name="gradle-groovy"/>
 <mruList name="hamClub"/>
 </workingSetManager>

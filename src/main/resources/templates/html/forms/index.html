@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header::wheresYourHeadAt}">
+  <title>Place Holder Title</title>
+</head>
+<!-- Start of Displayed Content -->
+<body>
+<header>
+  <h1 th:text="Form">This is a headline</h1>
+</header>
+<main>
+  <section>
+    <p th:text="${welcomeMessage}">
+      Generic Landing Page
+    </p>
+  </section>
+</main>
+<footer>
+  <sub th:text="JudgeLAN2025"></sub>
+</footer>
+</body>
+</html>

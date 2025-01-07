@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class contactController extends homeController {
+public class contactController {
 
 
     List<String> contactDetails = new ArrayList<>();
@@ -42,7 +42,7 @@ public class contactController extends homeController {
         String name = "testing";
         model.addAttribute("test", name);
         model.addAttribute("mainPageTitle", "Radidio365");
-        return "html/form";
+        return "html/forms/contactForm";
     }
 
 }
