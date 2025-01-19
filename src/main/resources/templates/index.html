@@ -3,29 +3,38 @@
 <head th:replace="~{fragments/header::wheresYourHeadAt}">
   <title>Place Holder Title</title>
 </head>
-<!-- Start of Displayed Content -->
-<body>
-  <header>
-      <h1 th:text = "${headLine}">This is a headline</h1>
-    <nav>
+<!--#######################################-->
+<!--      Start of Displayed Content       -->
+<!--#######################################-->
+<body class="grid-container">
+<!--    -->
+<header>
+  <div>
+    <h1 class="grid-header floater" th:class="grid-header " th:text="${headLine}">This is a headline</h1>
+  </div>
+  <div>
+    <section>
+      <p class="grid-header-catchline" th:class="grid-header-catchline" th:text="${infoPane}">
+        Generic Landing Page
+      </p>
+    </section>
+  </div>
+</header>
+<!--    -->
+<main>
+  <div>
+    <img alt="Under Construction" class="img-med center" src="../static/images/promos/dozer.png"
+         th:src="@{images/promos/dozer.png}">
+  </div>
+  <div>
 
-    </nav>
-  </header>
-  <main>
-      <div class="headLine">
-          <section>
-              <p th:text = "${infoPane}">
-                  Generic Landing Page
-              </p>
-          </section>
-      </div>
-      <div>
-        <img th:src="@{static/images/promos/dozer.png}" src="../static/images/promos/dozer.png" alt="Under Construction">
-      </div>
-      <div></div>
-  </main>
-  <footer>
-      <sub th:text="${me}">Code By C0deFluence</sub>
-  </footer>
+  </div>
+</main>
+<!--    -->
+<footer>
+  <sub class="footer" th:class="footer" th:text="${welcomeMessage}">Copyright&COPY;</sub>
+  <span class="lamigra footer" th:class="footer" th:text="${passingTime}">spam</span>
+</footer>
+<!--    -->
 </body>
 </html>

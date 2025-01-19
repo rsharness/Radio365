@@ -20,12 +20,13 @@ public class homeController {
     @GetMapping
     public String homePage(Model model) {
 
+
         String welcomeMessage = "Welcome to Radio365";
 
-        model.addAttribute("titulo", "Radio365");
-        model.addAttribute("headLine", "Radio365 Application");
+        model.addAttribute("titulo", "Radio365 - Radio Companion");
+        model.addAttribute("headLine", "Radio365");
         model.addAttribute("infoPane", "Your Radio Companion all year 'round");
-        model.addAttribute("copyRight", "Code By X0dEX");
+        model.addAttribute("copyRight", "Code By C0deFluence");
         model.addAttribute("welcomeMessage", welcomeMessage);
         return "index";
     }
